@@ -11,12 +11,7 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 
 class MainActivityViewModel: ViewModel() {
-    lateinit var bookList: MutableLiveData<BookListModel>
-
-    // call init method
-    init {
-        bookList = MutableLiveData()
-    }
+    var bookList: MutableLiveData<BookListModel> = MutableLiveData()
 
     // creating a separate function which is going to return this
     // book list observable just to update the recycler view in our
@@ -49,7 +44,7 @@ class MainActivityViewModel: ViewModel() {
             .subscribe(getBookListObserverRx())
     }
 
-    fun getBookListObserverRx(): Observer<BookListModel> {
+    private fun getBookListObserverRx(): Observer<BookListModel> {
         // Implement the Observer Interface
         // Basically what do we wanna do when we
         // receive the Observable book list?

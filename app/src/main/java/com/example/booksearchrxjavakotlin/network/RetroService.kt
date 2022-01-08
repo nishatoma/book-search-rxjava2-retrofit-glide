@@ -7,7 +7,7 @@ import retrofit2.http.Query
 
 interface RetroService {
 
-    @GET("/volumes")
+    @GET("volumes")
     // The return type needs to be an observable
     fun getBookListFromApi(@Query("q") query: String): Observable<BookListModel>
 }

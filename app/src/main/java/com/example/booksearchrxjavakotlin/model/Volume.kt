@@ -1,3 +1,5 @@
 package com.example.booksearchrxjavakotlin.model
 
-data class Volume(val book: Book)
+import com.google.gson.annotations.SerializedName
+
+data class Volume(@SerializedName("volumeInfo") val book: Book)
