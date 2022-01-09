@@ -9,14 +9,14 @@ import com.example.booksearchrxjavakotlin.R
 import com.example.booksearchrxjavakotlin.model.Volume
 import kotlinx.android.synthetic.main.recycler_book_row.view.*
 
-class BookListAdapter: RecyclerView.Adapter<BookListAdapter.BookListViewHolder>() {
+class BookListAdapter : RecyclerView.Adapter<BookListAdapter.BookListViewHolder>() {
 
 
     var bookListData = ArrayList<Volume>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookListViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-            .inflate(R.layout.recycler_book_row, parent,false)
+            .inflate(R.layout.recycler_book_row, parent, false)
 
         return BookListViewHolder(inflater)
     }
@@ -29,7 +29,7 @@ class BookListAdapter: RecyclerView.Adapter<BookListAdapter.BookListViewHolder>(
         return bookListData.size
     }
 
-    class BookListViewHolder(view: View): RecyclerView.ViewHolder(view) {
+    class BookListViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         private val bookTitle = view.tvTitle
         private val bookDesc = view.tvDescription

@@ -10,7 +10,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 
-class MainActivityViewModel: ViewModel() {
+class MainActivityViewModel : ViewModel() {
     var bookList: MutableLiveData<BookListModel> = MutableLiveData()
 
     // creating a separate function which is going to return this

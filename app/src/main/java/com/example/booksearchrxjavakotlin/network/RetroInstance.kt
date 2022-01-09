@@ -9,7 +9,7 @@ class RetroInstance {
     companion object {
         private const val baseURL = "https://www.googleapis.com/books/v1/" //volumes?q=harry
 
-        fun getRetroInstance() : Retrofit {
+        fun getRetroInstance(): Retrofit {
             return Retrofit.Builder()
                 .baseUrl(baseURL)
                 .addConverterFactory(GsonConverterFactory.create())
